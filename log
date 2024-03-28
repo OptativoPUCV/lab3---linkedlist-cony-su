@@ -309,3 +309,9 @@ list.c:123:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2414ab8
+Thu 28 Mar 2024 04:29:48 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+8a9a6cc
