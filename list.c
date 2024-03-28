@@ -153,7 +153,7 @@ void pushCurrent(List * list, void * data)
     return;
   }
 
-  list->current->next = nuevo->prev;
+  list->current->next = nuevo;
   nuevo->prev = list->current;
 
   return;
