@@ -161,7 +161,7 @@ void pushCurrent(List * list, void * data)
   
   list->current->next = nuevo;
 
-  if(nuevo->next = NULL)
+  if(nuevo->next == NULL)
   {
     list->tail = nuevo;
   }
