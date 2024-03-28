@@ -89,6 +89,7 @@ void * prevList(List * list)
   if(list->current == NULL || list->current->prev == NULL)
   {
     list->current = NULL;    
+    return NULL;
   }
   
   list->current = list->current->prev;
