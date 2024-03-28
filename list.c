@@ -44,8 +44,9 @@ void * firstList(List * list)
     list->current = NULL;
     return NULL;
   }
+  
   list->current = list->head;
-  return list->head;
+  return list->head->data;
 }
 
 //La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
