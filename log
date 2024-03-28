@@ -292,3 +292,20 @@ list.c:104:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 148c88c
+Thu 28 Mar 2024 04:29:32 AM UTC: 
+ list.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:123:17: error: too few arguments to function ‘createNode’
+  123 |   Node* nuevo = createNode();
+      |                 ^~~~~~~~~~
+list.c:23:8: note: declared here
+   23 | Node * createNode(void * data)
+      |        ^~~~~~~~~~
+list.c:123:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+  123 |   Node* nuevo = createNode();
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2414ab8

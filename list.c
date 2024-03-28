@@ -20,7 +20,8 @@ struct List {
 
 typedef List List;
 
-Node * createNode(void * data) {
+Node * createNode(void * data) 
+{
     Node * new = (Node *)malloc(sizeof(Node));
     assert(new != NULL);
     new->data = data;
@@ -73,14 +74,32 @@ void * lastList(List * list)
     return NULL;
   }
   
-  while(aux->next != NULL)
-  {
-    aux = aux->next;
-  }
+  aux = list->tail;
   
   list->current = aux;
   return aux->data;
 }
+
+/*
+void * lastList(List * list) 
+{
+  Node* aux = list->head;
+
+  if(list->head == NULL)
+  {
+    list->current = NULL;
+    return NULL;
+  }
+
+  while(aux->next != NULL)
+  {
+    aux = aux->next;
+  }
+
+  list->current = aux;
+  return aux->data;
+}
+*/
 
 
 //La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
