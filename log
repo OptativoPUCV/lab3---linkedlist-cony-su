@@ -261,3 +261,17 @@ Thu 28 Mar 2024 04:24:04 AM UTC:
  tests:  9|3
 total_score: 35/70
 e67b0b6
+Thu 28 Mar 2024 04:26:16 AM UTC: 
+ list.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:104:17: error: initialization of ‘Node *’ from incompatible pointer type ‘List *’ {aka ‘struct List *’} [-Werror=incompatible-pointer-types]
+  104 |   Node* nuevo = createList();
+      |                 ^~~~~~~~~~
+list.c:104:9: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+  104 |   Node* nuevo = createList();
+      |         ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ad8f734
