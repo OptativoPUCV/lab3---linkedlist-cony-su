@@ -59,7 +59,7 @@ void * nextList(List * list)
   }
   
   list->current = list->current->next;
-  return list->current;
+  return list->current->data;
   
 }
 
