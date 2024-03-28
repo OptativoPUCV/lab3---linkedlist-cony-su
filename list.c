@@ -133,8 +133,7 @@ void pushFront(List * list, void * data)
   nuevo->prev = NULL;
   
   list->head = nuevo;
-  
-  
+  return;
 }
 
 void pushBack(List * list, void * data) {
