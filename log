@@ -200,3 +200,19 @@ Thu 28 Mar 2024 04:15:48 AM UTC:
  tests:  6|4
 total_score: 25/70
 4166cd9
+Thu 28 Mar 2024 04:19:14 AM UTC: 
+ list.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:91:10: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   91 |   return current->data;
+      |          ^~~~~~~
+      |          popCurrent
+list.c:91:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:92:1: error: control reaches end of non-void function [-Werror=return-type]
+   92 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7b16a50
