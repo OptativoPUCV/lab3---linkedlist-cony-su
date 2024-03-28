@@ -155,3 +155,24 @@ Thu 28 Mar 2024 03:07:26 AM UTC:
  tests:  5|4
 total_score: 25/70
 0d4697a
+Thu 28 Mar 2024 04:10:43 AM UTC: 
+ list.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:68:3: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+   68 |   Nodo* aux = list->head;
+      |   ^~~~
+      |   Node
+list.c:68:15: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   68 |   Nodo* aux = list->head;
+      |               ^~~~
+list.c:73:14: error: request for member ‘next’ in something not a structure or union
+   73 |     aux = aux->next;
+      |              ^~
+list.c:75:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   75 |   list->current = aux;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+caf2748
