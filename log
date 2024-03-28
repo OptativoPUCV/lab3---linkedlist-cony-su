@@ -66,3 +66,17 @@ Thu 28 Mar 2024 02:47:43 AM UTC:
  tests:  1|5
 total_score: 10/70
 71377e2
+Thu 28 Mar 2024 02:49:50 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:41:26: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+   41 |   if(list->head == NULL) return;
+      |                          ^~~~~~
+list.c:39:8: note: declared here
+   39 | void * firstList(List * list)
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5c0abd9
