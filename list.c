@@ -75,11 +75,11 @@ void * lastList(List * list)
   
   while(aux->next != NULL)
   {
-    
     aux = aux->next;
   }
+  
   list->current = aux;
-  return aux;
+  return aux->data;
 }
 
 void * prevList(List * list) {
