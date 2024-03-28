@@ -75,12 +75,11 @@ void * lastList(List * list)
   }
   
   aux = list->tail;
-  
   list->current = aux;
   return aux->data;
 }
 
-/*
+/* opcion 2 (sin el tail)
 void * lastList(List * list) 
 {
   Node* aux = list->head;
