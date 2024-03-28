@@ -119,7 +119,7 @@ void * prevList(List * list)
 
 void pushFront(List * list, void * data) 
 {
-  Node* nuevo = createNode();
+  Node* nuevo = createNode(data);
   nuevo->data = data;
   
   if(list->head == NULL)
