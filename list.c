@@ -155,9 +155,17 @@ void pushCurrent(List * list, void * data)
   }
 
   nuevo->next = list->current->next;
+  
   if(list->current->next != NULL) list->current->next->prev = nuevo;
   nuevo->prev = list->current;
+  
   list->current->next = nuevo;
+
+  if(nuevo->next = NULL)
+  {
+    list->tail = nuevo;
+  }
+  
   return;
   
 }

@@ -536,3 +536,14 @@ Thu 28 Mar 2024 02:48:48 PM UTC:
  tests:  10|2
 total_score: 45/70
 b599c7c
+Thu 28 Mar 2024 02:50:41 PM UTC: 
+ list.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:164:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  164 |   if(nuevo->next = NULL)
+      |      ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3df6662
