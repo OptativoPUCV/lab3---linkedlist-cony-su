@@ -5,7 +5,8 @@
 
 typedef struct Node Node;
 
-struct Node {
+struct Node 
+{
     void * data;
     Node * next;
     Node * prev;
@@ -39,9 +40,7 @@ List * createList()
 void * firstList(List * list) 
 {
   if(list->head == NULL) return NULL;
-  
-  list->head = list->current;
-  
+  list->current = list->head;
   return list->head;
 }
 
