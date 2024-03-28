@@ -34,8 +34,14 @@ List * createList()
   return nuevo;
 }
 
-void * firstList(List * list) {
-    return NULL;
+
+//La primera retorna el dato del primer nodo de la lista (head) y actualiza el current para que apunte a ese nodo.
+void * firstList(List * list) 
+{
+  
+  list->head = list->current;
+  
+  return list->head;
 }
 
 void * nextList(List * list) {
