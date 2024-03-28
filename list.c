@@ -30,6 +30,7 @@ Node * createNode(void * data)
     return new;
 }
 
+//1. 
 List * createList() 
 {
   List* nuevo = (List*)malloc(sizeof(List*));
@@ -37,7 +38,7 @@ List * createList()
 }
 
 
-//La primera retorna el dato del primer nodo de la lista (head) y actualiza el current para que apunte a ese nodo.
+//2. La primera retorna el dato del primer nodo de la lista (head) y actualiza el current para que apunte a ese nodo.
 void * firstList(List * list) 
 {
   if(list->head == NULL) 
@@ -50,7 +51,7 @@ void * firstList(List * list)
   return list->head->data;
 }
 
-//La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
+//2. La segunda función retorna el dato del nodo a continuación del current y actualiza el current para que apunte a ese nodo.
 void * nextList(List * list) 
 {
   if(list->current == NULL || list->current->next == NULL) 
@@ -63,7 +64,7 @@ void * nextList(List * list)
   return list->current->data; 
 }
 
-//La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente.
+//3. La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente.
 void * lastList(List * list) 
 {
   Node* aux = list->head;
@@ -101,7 +102,7 @@ void * lastList(List * list)
 */
 
 
-//La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
+//3. La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
 void * prevList(List * list) 
 {
   if(list->current == NULL || list->current->prev == NULL)
@@ -115,7 +116,7 @@ void * prevList(List * list)
 }
 
 
-//Programe la función void pushFront(List * list, void * data), la cual agrega un dato al comienzo de la lista.
+//4. Programe la función void pushFront(List * list, void * data), la cual agrega un dato al comienzo de la lista.
 
 void pushFront(List * list, void * data) 
 {
@@ -161,7 +162,8 @@ void pushCurrent(List * list, void * data)
   
 }
 
-void * popFront(List * list) {
+void * popFront(List * list) 
+{
     list->current = list->head;
     return popCurrent(list);
 }
