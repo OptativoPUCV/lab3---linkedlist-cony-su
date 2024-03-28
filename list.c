@@ -73,7 +73,7 @@ void * lastList(List * list)
     return NULL;
   }
   
-  while(aux != NULL)
+  while(aux->next != NULL)
   {
     
     aux = aux->next;
