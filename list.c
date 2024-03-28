@@ -130,12 +130,12 @@ void pushFront(List * list, void * data)
     return;
   }
 
-  nuevo->next = list->head->prev;
+  nuevo->next = list->head;
   list->head->prev = nuevo;
   nuevo->prev = NULL;
   
   list->head = nuevo;
-  return;
+
 }
 
 void pushBack(List * list, void * data) {
