@@ -334,3 +334,16 @@ list.c:23:8: note: declared here
       |        ^~~~~~~~~~
 Compilation failed
 3d5824e
+Thu 28 Mar 2024 04:37:49 AM UTC: 
+ list.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:122:17: error: too few arguments to function ‘createNode’
+  122 |   Node* nuevo = createNode();
+      |                 ^~~~~~~~~~
+list.c:23:8: note: declared here
+   23 | Node * createNode(void * data)
+      |        ^~~~~~~~~~
+Compilation failed
+0738415
