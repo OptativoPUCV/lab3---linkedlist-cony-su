@@ -150,6 +150,7 @@ void pushCurrent(List * list, void * data)
   Node* nuevo = createNode(data);
   if(list->current == NULL)
   {
+    list->current = nuevo;
     
     return;
   }
