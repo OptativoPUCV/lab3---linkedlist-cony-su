@@ -125,8 +125,7 @@ void pushFront(List * list, void * data)
   if(list->head == NULL)
   {
     list->head = nuevo;
-    list->head->prev = NULL;
-    list->head->next = NULL;
+    list->tail = nuevo;
     return;
   }
 
@@ -135,7 +134,7 @@ void pushFront(List * list, void * data)
   nuevo->prev = NULL;
   
   list->head = nuevo;
-
+  return;
 }
 
 void pushBack(List * list, void * data) {
