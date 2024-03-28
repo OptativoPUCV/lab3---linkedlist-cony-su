@@ -32,9 +32,9 @@ List * createList()
 {
   List* nuevo = (List*)malloc(sizeof(List*));
   nuevo->head = NULL;
-  
-  
-  return NULL;
+  nuevo->tail = NULL;
+  nuevo->current = NULL;
+  return nuevo;
 }
 
 void * firstList(List * list) {
