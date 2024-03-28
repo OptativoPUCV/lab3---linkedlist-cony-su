@@ -151,46 +151,21 @@ void pushCurrent(List * list, void * data)
   if(list->current == NULL)
   {
     list->current = nuevo;
-    
     return;
   }
-
+//el siguiente del nuevo es el siguiente del current
   nuevo->next = list->current->next;
-  
+//Si el nodo siguiente al nodo actual no es NULL, se actualiza el puntero prev de ese nodo para que apunte al nuevo nodo que se está insertando, estableciendo así la conexión en ambos sentidos entre los nodos.
   if(list->current->next != NULL) list->current->next->prev = nuevo;
+  //el prev del nuevo es el current
   nuevo->prev = list->current;
-  
+//el siguiente del current es el nuevo
   list->current->next = nuevo;
-
-  if(nuevo->next == NULL)
-  {
-    list->tail = nuevo;
-  }
+//si no hay nodo despues de nuevo, tail se actualiza
+  if(nuevo->next == NULL) list->tail = nuevo;
   
   return;
-  
 }
-
-/*
-void pushCurrent(List * list, void * data) 
-{
-  Node* nuevo = createNode(data);
-  if(list->current == NULL)
-  {
-    list->current = nuevo;
-    list->head = nuevo;
-    list->tail = nuevo;
-    return;
-  }
-
-  nuevo->next = list->current->next;
-  if(list->current->next != NULL) list->current->next->prev = nuevo;
-  nuevo->prev = list->current;
-  list->current->next = nuevo;
-  return;
-
-}
-*/
 
 void * popFront(List * list) 
 {
