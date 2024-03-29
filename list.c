@@ -199,7 +199,7 @@ void * popCurrent(List * list)
   if(nodo_eliminado->next != NULL) nodo_eliminado->next->prev = nodo_eliminado->prev;
   
 
-  list->current = list->current->next;
+  list->current = nodo_eliminado->next;
   
   return dato_eliminado;
 }
