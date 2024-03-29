@@ -576,3 +576,9 @@ list.c:190:10: error: unused variable ‘dato_aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 7f51a26
+Fri 29 Mar 2024 05:21:21 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  11|1
+total_score: 55/70
+ad7d66f
