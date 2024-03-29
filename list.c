@@ -207,7 +207,7 @@ void * popCurrent(List * list)
 
   if(list->current->next != NULL)
   {
-    list->current->next->prev = list->current->prev;
+    nodo_eliminado->next->prev = nodo_eliminado->prev;
   }
 
   list->current = list->current->next;
