@@ -187,8 +187,17 @@ void * popCurrent(List * list)
 {
   if(list->current == NULL) return NULL;
 
-  void * dato_aux = list->current->data; 
-  list->current->next->prev = list->current->next;
+  if(list->current->prev == NULL) //si es el primero, head se actualiza
+  {
+    list->head = list->current->next;
+    if(list->head != NULL) list->head->prev = NULL; //si no es el ultimo, prev del head se actualiza
+    
+  }
+    
+  }
+  
+  /*void * dato_aux = list->current->data; 
+  list->current->next->prev = list->current->next;*/
   
   return dato_aux;
 }
