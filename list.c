@@ -190,14 +190,14 @@ void * popCurrent(List * list)
   Node* nodo_eliminado = list->current;
   void* dato_eliminado = list->current->data;
 
-  if(list->current == list->head) //si es el primero, head se actualiza
+  if(nodo_eliminado == list->head) //si es el primero, head se actualiza
   {
-    list->head = list->current->next;
+    list->head = nodo_eliminado->next;
   }
     
-  if(list->current == list->tail)
+  if(nodo_eliminado == list->tail)
   {
-    list->tail = list->current->prev; 
+    list->tail = nodo_eliminado->prev; 
   }
 
   if(list->current->prev != NULL)

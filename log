@@ -610,3 +610,9 @@ list.c:190:9: error: unused variable ‘nodo_eliminado’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 bba8507
+Fri 29 Mar 2024 06:17:20 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  12|0
+total_score: 70/70
+8be0de5
