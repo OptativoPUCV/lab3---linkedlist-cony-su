@@ -599,3 +599,14 @@ list.c:197:3: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 0387da0
+Fri 29 Mar 2024 06:16:26 AM UTC: 
+ list.c | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:190:9: error: unused variable ‘nodo_eliminado’ [-Werror=unused-variable]
+  190 |   Node* nodo_eliminado = list->current;
+      |         ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bba8507

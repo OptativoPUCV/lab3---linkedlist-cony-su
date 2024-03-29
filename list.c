@@ -186,20 +186,36 @@ void * popBack(List * list) {
 void * popCurrent(List * list) 
 {
   if(list->current == NULL) return NULL;
+  
+  Node* nodo_eliminado = list->current;
+  void* dato_eliminado = list->current->data;
 
-  if(list->current->prev == NULL) //si es el primero, head se actualiza
+  if(list->current == list->head) //si es el primero, head se actualiza
   {
     list->head = list->current->next;
-    if(list->head != NULL) list->head->prev = NULL; //si no es el ultimo, prev del head se actualiza
-    
   }
     
+  if(list->current == list->tail)
+  {
+    list->tail = list->current->prev; 
   }
+
+  if(list->current->prev != NULL)
+  {
+    list->current->prev->next = list->current->next;
+  }
+
+  if(list->current->next != NULL)
+  {
+    list->current->next->prev = list->current->prev;
+  }
+
+  list->current = list->current->next;
   
   /*void * dato_aux = list->current->data; 
   list->current->next->prev = list->current->next;*/
   
-  return dato_aux;
+  return dato_eliminado;
 }
 
 void cleanList(List * list) {
