@@ -565,3 +565,14 @@ Thu 28 Mar 2024 03:01:03 PM UTC:
  tests:  11|1
 total_score: 55/70
 88824e2
+Fri 29 Mar 2024 05:16:48 AM UTC: 
+ list.c | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:190:10: error: unused variable ‘dato_aux’ [-Werror=unused-variable]
+  190 |   void * dato_aux = list->current->data;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7f51a26

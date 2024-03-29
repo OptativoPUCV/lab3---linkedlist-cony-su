@@ -30,7 +30,7 @@ Node * createNode(void * data)
     return new;
 }
 
-//1. 
+//1. Programe la función List* createList(), la cual retorna el puntero del tipo de dato List con sus valores inicializados en NULL.
 List * createList() 
 {
   List* nuevo = (List*)malloc(sizeof(List*));
@@ -167,19 +167,30 @@ void pushCurrent(List * list, void * data)
   return;
 }
 
+
+//NO TOCAR
 void * popFront(List * list) 
 {
     list->current = list->head;
     return popCurrent(list);
 }
 
+//NO TOCAR
 void * popBack(List * list) {
     list->current = list->tail;
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) {
-    return NULL;
+
+//Programe la función void* popCurrent(List * list), la cual elimina el nodo que está en la posición del current de la lista enlazada, y además retorna el dato del nodo eliminado. El current debe quedar apuntando al nodo siguiente del eliminado.
+void * popCurrent(List * list) 
+{
+  if(list->current == NULL) return NULL;
+
+  void * dato_aux = list->current->data; 
+  
+  
+  return NULL;
 }
 
 void cleanList(List * list) {
